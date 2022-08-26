@@ -5,19 +5,19 @@ const DivPlanetsImg = styled.div`
   transition: .2s ease-in-out;
   user-select: none;
 
-  h3 {
-    color: transparent;
-  }
-
-  img {
+  .image-planet {
     pointer-events: none;
     width: 110px;
+  } 
+
+  .name-planet {
+    color: transparent;
   }
 
   &:hover{
     filter: brightness(1);
 
-    h3 {
+    .name-planet {
       color: white;
     }
   }

@@ -5,7 +5,7 @@ const HeaderDiv = styled.header`
   display: flex;
   flex-direction: column;
 
-  h1{
+  .title_header{
     border-bottom: 2px solid white;
     color: white;
     font-weight: normal;
