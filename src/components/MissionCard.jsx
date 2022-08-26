@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import DivCardMission from '../style/DivCardMission';
 
 class MissionCard extends Component {
   render() {
-    const { name, year, country, destination } = this.props;
+    const { name, year, country, destination, place } = this.props;
     return (
-      <div data-testid="mission-card">
-        <p data-testid="mission-name">{ name }</p>
-        <p data-testid="mission-year">{ year }</p>
-        <p data-testid="mission-country">{ country }</p>
-        <p data-testid="mission-destination">{ destination }</p>
-      </div>
+      <DivCardMission data-testid="mission-card">
+        <h3 className="title-year" data-testid="mission-year">{ year }</h3>
+        <p className="info-mission" data-testid="mission-name">{ name }</p>
+        <p className="info-mission" data-testid="mission-country">{ country }</p>
+        <p className="info-mission" data-testid="mission-destination">{ destination }</p>
+        <img className="planet-image" src={ place } alt={ name } />
+      </DivCardMission>
     );
   }
 }
@@ -20,6 +22,7 @@ MissionCard.propTypes = {
   year: PropTypes.string.isRequired,
   country: PropTypes.string.isRequired,
   destination: PropTypes.string.isRequired,
+  place: PropTypes.string.isRequired,
 };
 
 export default MissionCard;
