@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
+import HeaderDiv from '../style/HeaderDiv';
 
 class Header extends Component {
   render() {
     return (
-      <header>
-        <h1>Sistema Solar</h1>
-      </header>
+      <HeaderDiv>
+        <h1
+          className="title_header"
+        >
+          Sistema Solar
+        </h1>
+      </HeaderDiv>
     );
   }
 }
